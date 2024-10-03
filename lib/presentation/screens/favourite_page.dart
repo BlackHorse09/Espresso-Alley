@@ -31,8 +31,10 @@ class _FavouritePageState extends State<FavouritePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: const Text(AllStrings.favourite),
+          backgroundColor: Colors.white,
         ),
         body: Stack(
           children: [
