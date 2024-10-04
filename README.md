@@ -1,5 +1,5 @@
 # Espresso-Alley
-It's a MVP where user will get coffee image from API. They can save images and can watch those even if they is no internet.
+This app provides a simple and enjoyable way to browse through coffee images. Upon opening, users are greeted with a coffee image, which they can either mark as a favorite or choose not to. Favorited images are stored locally, allowing users to view them in the "Favorites" section even without an internet connection. Users can manage their favorites by revisiting and deleting images at any time, offering an easy and personalized experience.
 
 ## How to Run the Flutter App
 
