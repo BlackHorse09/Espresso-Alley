@@ -71,15 +71,19 @@ class _HomePageState extends State<HomePage> {
                     } else if (state is CoffeeImageSuccessState) {
                       return ImageTwoButtons(
                           imageUrl: state.image.file,
-                          onNextPressed: () {
+                          onNotFavouritePressed: () {
                             context
                                 .read<CoffeeImageBloc>()
                                 .add(CoffeeImageFetchImageData());
                           },
-                          onSaveImagePressed: () {
+                          onFavouritePressed: () async {
                             context
                                 .read<CoffeeImageBloc>()
                                 .add(SaveCoffeeImage(image: state.image.file));
+                            await Future.delayed(const Duration(seconds: 1));
+                            context
+                                .read<CoffeeImageBloc>()
+                                .add(CoffeeImageFetchImageData());
                           },
                           isSaving: state.isSaving);
                     } else if (state is NoInternetConnectionState) {

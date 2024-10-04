@@ -8,14 +8,14 @@ import 'package:flutter/material.dart';
 
 class ImageTwoButtons extends StatelessWidget {
   final String imageUrl;
-  final VoidCallback onSaveImagePressed;
-  final VoidCallback onNextPressed;
+  final VoidCallback onFavouritePressed;
+  final VoidCallback onNotFavouritePressed;
   final bool isSaving;
   const ImageTwoButtons(
       {super.key,
       required this.imageUrl,
-      required this.onNextPressed,
-      required this.onSaveImagePressed,
+      required this.onFavouritePressed,
+      required this.onNotFavouritePressed,
       required this.isSaving});
 
   @override
@@ -50,12 +50,13 @@ class ImageTwoButtons extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            AppButton(onButtonPress: onNotFavouritePressed, label: AllStrings.notFavourite),
             !isSaving
                 ? AppButton(
-                    onButtonPress: onSaveImagePressed,
-                    label: AllStrings.saveImage)
+                    onButtonPress: onFavouritePressed,
+                    label: AllStrings.favourite)
                 : const AppLoaderWidget(),
-            AppButton(onButtonPress: onNextPressed, label: AllStrings.next)
+            
           ],
         ),
         const SizedBox(height: 24),

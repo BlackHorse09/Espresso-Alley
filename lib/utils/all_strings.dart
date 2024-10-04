@@ -11,6 +11,7 @@ class AllStrings {
   static const String imageSavedError = "Image Save Error";
   static const String emptyLocalImage = "Your Saved Images will be shown here!";
   static const String favourite = "Favourite";
+  static const String notFavourite = "Not Favourite";
   static const String noInternetConnection =
       "Unable to load new images as there's no internet connection, but you can still view your favorite saved images";
   static const String favouriteImages = "Favourite Images";
